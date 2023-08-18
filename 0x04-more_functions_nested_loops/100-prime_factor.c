@@ -7,13 +7,23 @@
 
 int main(void)
 {
-	unsigned long int i, n = 612852475143;
+	long int i, n, d;
 
-	for (i = 3; 1 < 782849; i = i + 2)
+	n = 612852475143;
+	for (i = 1; i <= n; i++)
 	{
-		while ((n % i == 0) && (n != i))
-			n = n / i;
+		if (n % i == 0)
+		{
+			if (n == i)
+			{
+				printf("%ld\n", i);
+				break;
+			}
+			d = n / i;
+			n = d;
+		}
 	}
-	printf("%lu\n", n);
+
 	return (0);
 }
+
